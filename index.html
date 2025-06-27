@@ -2,131 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Leonard Phokane | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonard Phokane | Cloud Engineer & Flutter Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
-      margin: 0;
+      background-color: #f4f6f8;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f7f9fc;
-      color: #222;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
+    .profile-pic {
+      width: 150px;
+      border-radius: 50%;
+      border: 4px solid #61dafb;
     }
-    header, section, footer {
-      margin-bottom: 2rem;
+    h1, h2 {
+      color: #0d6efd;
     }
-    h1 {
-      color: #2c3e50;
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 0.3rem;
-    }
-    h2 {
-      color: #34495e;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    ul li {
-      margin-bottom: 0.4rem;
-    }
-    a {
-      color: #1e88e5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.95rem;
-        padding: 1rem;
-      }
+    section {
+      padding: 2rem 0;
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-   <header class="text-center text-white bg-dark py-5">
-  <img src="leonard.jpg" alt="Leonard Phokane" class="profile-pic mb-3">
-  <h1 class="display-4 text-primary fw-bold">Leonard Phokane</h1>
-  <p class="lead">Aspiring Cloud Engineer | Flutter App Developer | Certified AI Engineer</p>
-</header>
 
+  <!-- HEADER -->
+  <header class="text-center text-white bg-dark py-5">
+    <img src="leonard.jpg" alt="Leonard Phokane" class="profile-pic mb-3">
+    <h1 class="display-4 text-primary fw-bold">Leonard Phokane</h1>
+    <p class="lead">Aspiring Cloud Engineer | Flutter App Developer | Certified AI Engineer</p>
+  </header>
 
+  <!-- WELCOME -->
+  <section class="container text-center">
+    <h2>Welcome</h2>
+    <p>Passionate about building scalable, secure, and resilient applications using AWS, Dart, and AI. I bridge mobile and cloud to engineer future-ready solutions aligned with impact-driven innovation.</p>
+  </section>
 
-    <section id="education">
-      <h2>🎓 Education</h2>
-      <p><strong>BSc. Information Technology and Computer Science</strong><br>University of South Africa</p>
-    </section>
-
-    <section id="courses">
-      <h2>📘 Courses</h2>
-      <ul>
-        <li>AWS Cloud Architect – 110005 @ Deviare.africa</li>
-        <li>Software Development @ Power Learn Project | Academy</li>
-      </ul>
-    </section>
-
-    <section id="certifications">
-      <h2>📜 Certifications</h2>
-      <ul>
-        <li>Microsoft AI Fluency @ Deviare.africa</li>
-        <li>Java Web Development @ IBM / MICT SETA</li>
-      </ul>
-    </section>
-
-    <section id="skills">
-      <h2>💼 Skills & Tools</h2>
-      <ul>
-        <li>AWS (EC2, Route 53, Auto Scaling)</li>
-        <li>Flutter, Dart, REST APIs</li>
-        <li>Git & GitHub (CI/CD ready)</li>
-        <li>IIS Server Configuration & Hosting</li>
-        <li>Machine Learning basics – TensorFlow</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-  <h2>📁 Projects</h2>
-   <ul>
-     <li>Email-Driven Archival System</li>
-      <p>Used AWS Lambda, SES, and S3 to automate email archiving workflows.</p>
-    
-    <li>Cloud Website Deployment (IIS on AWS)</li>
-      <p>Configured EC2, IIS, and security groups to host a live site from scratch.</p>
-    <li>Vibe Coding Hackathon</li>
-      <p>Developed a cross-platform Flutter app under pressure in a team setting.</p>
-    <li>Mobile UI Showcase</li>
-      <p>Built rich UIs with GridView, Card, and interactive forms in Flutter.</p>
-   <li>AI in Software Engineering</li>
-      <p>Designed an ML model to enhance software workflows, aligned with SDG goals.</p>
+  <!-- SKILLS -->
+  <section class="container">
+    <h2 class="text-center">💼 Skills</h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Amazon S3, SES, Lambda, Route 53</li>
+      <li class="list-group-item">Serverless Architecture & Infrastructure Automation</li>
+      <li class="list-group-item">Flutter & Dart (Advanced UI, State Management)</li>
+      <li class="list-group-item">AI/Machine Learning with TensorFlow</li>
+      <li class="list-group-item">Secure and Scalable Web Deployments on AWS (IIS, EC2, IAM)</li>
     </ul>
-  </div>
-</section>
+  </section>
 
+  <!-- 📁 PROJECTS -->
+  <section class="container">
+    <h2 class="text-center">📁 Projects</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Email-Driven Archival System</h5>
+        <p>Used AWS Lambda, SES, and S3 to automate email archiving workflows.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Cloud Website Deployment (IIS on AWS)</h5>
+        <p>Configured EC2, IIS, and security groups to host a live site from scratch.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Vibe Coding Hackathon</h5>
+        <p>Developed a cross-platform Flutter app under pressure in a team setting.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Mobile UI Showcase</h5>
+        <p>Built rich UIs with GridView, Card, and interactive forms in Flutter.</p>
+      </div>
+      <div class="col-md-12">
+        <h5>AI in Software Engineering</h5>
+        <p>Designed an ML model to enhance software workflows, aligned with SDG goals.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>📬 Connect with Me</h2>
-      <p>Email: <a href="mailto:leonardphokane1@gmail.com">leonardphokane1@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/leonardphokane" target="_blank">github.com/leonardphokane</a></p>
-    </section>
+  <!-- CONTACT -->
+  <section class="container text-center my-5">
+    <h2 class="text-primary">📬 Contact Me</h2>
+    <p>Email: <a href="mailto:leonardphokane1@gmail.com">leonardphokane1@gmail.com</a></p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+      <a href="https://github.com/leonardphokane" target="_blank" class="btn btn-outline-dark">GitHub</a>
+    </div>
+  </section>
 
-    <footer>
-      <p>&copy; 2025 Leonard Phokane. All rights reserved.</p>
-    </footer>
-  </div>
+  <!-- FOOTER -->
+  <footer class="text-center text-white bg-dark py-3">
+    <p>© 2025 Leonard Phokane. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
