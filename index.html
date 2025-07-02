@@ -4,87 +4,199 @@
   <meta charset="UTF-8" />
   <title>Leonard Phokane | Cloud Engineer & Flutter Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
   <style>
+    :root {
+      --primary: #0d6efd;
+      --accent: #00e5ff;
+      --dark-bg: #1e1e1e;
+    }
+
     body {
-      background-color: #f4f6f8;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      scroll-behavior: smooth;
     }
-    .profile-pic {
-      width: 150px;
+
+    /* 🔁 Scrolling marquee header */
+    .scrolling-title {
+      background: linear-gradient(to right, var(--primary), #00bcd4);
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      font-weight: bold;
+      padding: 1rem;
+      font-size: 1.2rem;
+      text-shadow: 0 0 5px var(--accent);
+    }
+
+    .scrolling-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 16s linear infinite;
+    }
+
+    .scrolling-title:hover .scrolling-text {
+      animation-play-state: paused;
+      cursor: pointer;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* 🌟 Hero Section */
+    header.hero {
+      background-color: var(--dark-bg);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+
+    .hero img {
+      width: 140px;
       border-radius: 50%;
-      border: 4px solid #61dafb;
+      border: 5px solid var(--accent);
+      box-shadow: 0 0 20px var(--accent);
     }
-    h1, h2 {
-      color: #0d6efd;
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
     }
+
+    .typewriter {
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid var(--accent);
+      animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+      width: 0;
+      display: inline-block;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: var(--accent); }
+    }
+
     section {
       padding: 3rem 0;
     }
+
+    h2 {
+      color: var(--primary);
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="text-center text-white bg-dark py-5">
-    <img src="leonard.jpg" alt="Leonard Phokane" class="profile-pic mb-3" />
-    <h1 class="display-5 text-primary fw-bold">Leonard Phokane</h1>
-    <p class="lead">Aspiring Cloud Engineer | Flutter App Developer | Certified AI Engineer</p>
+  <!-- 🌀 Scrolling Marquee Title -->
+  <div class="scrolling-title">
+    <div class="scrolling-text">🚀 Leonard Phokane | Cloud Engineer | Flutter Developer | Ethical AI Advocate | Explore My Projects & Passions 👨‍💻 &nbsp;</div>
+  </div>
+
+  <!-- 👤 Hero Section -->
+  <header class="hero">
+    <img src="leonard.jpg" alt="Portrait of Leonard Phokane – Cloud Engineer & Flutter Developer" />
+    <h1>Leonard Phokane</h1>
+    <p class="typewriter">Cloud Engineer | Flutter Developer | AI Enthusiast</p>
   </header>
 
-  <!-- GRID LAYOUT -->
-  <section class="container">
-    <div class="row text-center text-md-start">
+  <!-- 📚 Main Content -->
+  <main class="container">
+    <div class="row text-center text-md-start g-5">
       <div class="col-md-6">
-        <h2>🎓 Education</h2>
-        <p><strong>BSc. Information Technology and Computer Science</strong><br />University of South Africa</p>
-        <h2>📘 Courses</h2>
+        <h2>🎓 Education & Courses</h2>
+        <p><strong>BSc. Information Technology & Computer Science</strong><br>University of South Africa</p>
         <ul>
-          <li>AWS Cloud Architect – 110005 @ Deviare.africa</li>
-          <li>Software Development @ Power Learn Project | Academy</li>
-        </ul>
-        <h2>📜 Certifications</h2>
-        <ul>
-          <li>Microsoft AI Fluency @ Deviare.africa</li>
-          <li>Java Web Development @ IBM / MICT SETA</li>
+          <li>AWS Cloud Architect – Deviare.africa</li>
+          <li>Software Development – Power Learn Project</li>
+          <li>AI Fluency – Deviare.africa</li>
+          <li>Java Web Development – IBM / MICT SETA</li>
         </ul>
       </div>
 
       <div class="col-md-6">
-        <h2>💼 Skills & Tools</h2>
+        <h2>🛠️ Skills & Tools</h2>
         <ul>
           <li>AWS (EC2, S3, Route 53, Auto Scaling)</li>
           <li>Flutter & Dart (Advanced UI, REST APIs)</li>
-          <li>IIS Configuration, GitHub & CI/CD</li>
-          <li>Serverless Dev & Infrastructure Automation</li>
-          <li>TensorFlow & basic ML workflows</li>
-        </ul>
-        <h2>📁 Projects</h2>
-        <ul>
-          <li><strong>Email-Driven Archival System</strong>: AWS Lambda + SES + S3</li>
-          <li><strong>Cloud Site Deployment</strong>: IIS + EC2 + Security Groups</li>
-          <li><strong>Vibe Hackathon</strong>: Flutter mobile team app</li>
-          <li><strong>Mobile UI Showcase</strong>: GridView, Cards, Forms</li>
-          <li><strong>AI in Software Engineering</strong>: ML for SDG tracking</li>
+          <li>CI/CD, GitHub Workflows, IIS Config</li>
+          <li>TensorFlow + Edge ML Pipelines</li>
+          <li>HTML/CSS, JS, Flask, Database Dev</li>
         </ul>
       </div>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="container text-center">
-    <h2 class="text-primary">📬 Contact Me</h2>
-    <p>Email: <a href="mailto:leonardphokane1@gmail.com">leonardphokane1@gmail.com</a></p>
-    <div class="d-flex justify-content-center gap-3">
-      <a href="https://www.linkedin.com/in/your-linkedin" class="btn btn-outline-primary" target="_blank">LinkedIn</a>
-      <a href="https://github.com/leonardphokane" class="btn btn-outline-dark" target="_blank">GitHub</a>
+    <hr class="my-5">
+
+    <div class="row text-center text-md-start g-5">
+      <div class="col-md-6">
+        <h2>🚀 Featured Projects</h2>
+        <ul>
+          <li><strong>Email Archival System</strong> – AWS Lambda + SES + S3</li>
+          <li><strong>Dropout Prediction AI</strong> – <a href="https://leonardphokane.github.io/ai-student-dropout-prediction/" target="_blank">[view site]</a></li>
+          <li><strong>Cloud Deployment</strong> – IIS + EC2 + Security Groups</li>
+          <li><strong>Vibe Hackathon App</strong> – Flutter</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2>🌐 Connect</h2>
+        <p>Email: <a href="mailto:leonardphokane1@gmail.com">leonardphokane1@gmail.com</a></p>
+        <div class="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-md-start">
+          <a href="https://www.linkedin.com/in/leonard-phokane" class="btn btn-outline-primary" target="_blank">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/leonardphokane" class="btn btn-outline-dark" target="_blank">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://leonardphokane.github.io/enhanced-cloud-portfolio/" class="btn btn-outline-secondary" target="_blank">
+            <i class="bi bi-globe"></i> Portfolio
+          </a>
+        </div>
+      </div>
     </div>
-  </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer class="text-center text-white bg-dark py-3">
-    <p>© 2025 Leonard Phokane. All rights reserved.</p>
+  <!-- 📎 Footer -->
+  <footer>
+    <p>© 2025 Leonard Phokane. Designed with 💙, Cloud & Code.</p>
   </footer>
 
 </body>
